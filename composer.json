@@ -1,0 +1,48 @@
+{
+    "name": "mane-olawale/waabot-laravel-notification-channel",
+    "description": "A notification channel for waabot api",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/mane-olawale/waabot-laravel-notification-channel",
+    "support": {
+        "issues": "https://github.com/mane-olawale/waabot-laravel-notification-channel/issues",
+        "source": "https://github.com/mane-olawale/waabot-laravel-notification-channel"
+    },
+    "authors": [
+        {
+            "name": "Ilesanmi Olawale Adedotun",
+            "homepage": "https://twitter.com/mane_olawale",
+            "email": "horlwaley001@gmail.com"
+        }
+    ],
+	"require": {
+		"php": "^7.2|^8.0",
+        "illuminate/notifications": "^6.0|^7.0|^8.0|^9.0|^10.0",
+        "illuminate/support": "^6.0|^7.0|^8.0|^9.0|^10.0"
+	},
+    "require-dev": {
+        "orchestra/testbench": "^4.0|^5.0|^6.0|^7.0|^8.0",
+        "phpunit/phpunit": "~8.0|~9.0",
+        "mockery/mockery": "~1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "ManeOlawale\\Laravel\\WaabotChannel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+         "psr-4": {
+             "ManeOlawale\\Laravel\\WaabotChannel\\Tests\\": "tests/"
+         }
+     },
+    "scripts": {
+        "test": "./vendor/bin/phpunit --verbose"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ManeOlawale\\Laravel\\WaabotChannel\\WaabotChannelServiceProvider"
+            ]
+        }
+    }
+}
