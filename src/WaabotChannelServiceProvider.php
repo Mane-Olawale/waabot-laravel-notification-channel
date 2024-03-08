@@ -5,8 +5,6 @@ namespace ManeOlawale\Laravel\WaabotChannel;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Notifications\ChannelManager;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\App;
 
 class WaabotChannelServiceProvider extends ServiceProvider
 {
@@ -31,5 +29,6 @@ class WaabotChannelServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        //
     }
 }

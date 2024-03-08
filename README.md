@@ -1,5 +1,5 @@
 <p align="center">
-    <img title="WaabotChannel" src="https://raw.githubusercontent.com/Mane-Olawale/waabot-laravel-notification-channel/main/larave-termii.png"/>
+    <img title="WaabotChannel" src="https://waabot.com/static/images/ripple.svg"/>
 </p>
 
 <p align="center">
@@ -12,8 +12,6 @@
 # WaabotChannel Laravel Package
 
 A notification channel for waabot api
-
-Uses [WaabotChannel Client](https://github.com/Mane-Olawale/waabot-laravel-notification-channel).
 
 
 ## Requirements
