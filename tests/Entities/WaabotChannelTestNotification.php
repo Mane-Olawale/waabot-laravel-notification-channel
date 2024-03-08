@@ -7,7 +7,7 @@ use ManeOlawale\Laravel\WaabotChannel\Messages\WhatsappMessage;
 
 class WaabotChannelTestNotification extends Notification
 {
-    public function toWaabotChannel($notifiable)
+    public function toWaabotWhatsapp($notifiable)
     {
         return new WhatsappMessage('Hello world');
     }

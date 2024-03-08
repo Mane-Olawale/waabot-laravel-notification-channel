@@ -6,13 +6,12 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
-use Mockery as Mock;
-use ManeOlawale\Laravel\WaabotChannel\Tests\TestCase;
 use ManeOlawale\Laravel\WaabotChannel\Tests\Entities\WaabotChannelTestNotification;
 use ManeOlawale\Laravel\WaabotChannel\Tests\Entities\WaabotChannelTestNotifiable;
 use ManeOlawale\Laravel\WaabotChannel\Channels\WaabotWhatsappChannel;
+use ManeOlawale\Laravel\WaabotChannel\Tests\TestBench;
 
-class WaabotWhatsappChannelTest extends TestCase
+class WaabotWhatsappChannelTest extends TestBench
 {
     public function testSmsIsSentViaWaabotChannel()
     {
@@ -34,6 +33,6 @@ class WaabotWhatsappChannelTest extends TestCase
 
         $channel = new WaabotWhatsappChannel();
 
-        $channel->send($notifiable, $notification);
+        $this->assertInstanceOf(\Psr\Http\Message\ResponseInterface::class, $channel->send($notifiable, $notification));
     }
 }

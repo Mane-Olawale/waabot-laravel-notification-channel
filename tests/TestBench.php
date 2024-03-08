@@ -12,13 +12,13 @@ class TestBench extends BaseTestCase
 
     protected function getEnvironmentSetUp($app)
     {
-        putenv('APP_KEY=base64:T6p1jh3jKnlTinoP8rDhdC2j8dAGK0+3ixIKwjF37x8=');
-        putenv('TERMII_API_KEY=ehrbgirbgiervirbviwrv');
-        putenv('TERMII_SENDER_ID=Olawale');
-        $config = require __DIR__ . '/../config/termii.php';
-
-        $app['config']->set('termii', $config);
-        $app['request']->setLaravelSession($app['session.store']);
+        $app['config']->set('services', [
+            'waabot' => [
+                'url' => 'https://api.waabot.com/api/v1',
+                'session_id' => 'session_id',
+                'access_token' => 'access_token',
+            ]
+        ]);
     }
 
     /**
