@@ -42,7 +42,7 @@ class WaabotWhatsappChannel
 
         $client = $this->makeClient();
         $response = $client->post(sprintf(
-                '%s/whatsapp/message?session_id=%s&access_token=%s',
+                '%swhatsapp/message?session_id=%s&access_token=%s',
                 Config::get('services.waabot.url'),
                 Config::get('services.waabot.session_id'),
                 Config::get('services.waabot.access_token'),
